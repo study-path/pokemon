@@ -5,7 +5,7 @@
       v-if="pokemon"
       class="flex flex-col justify-center items-сenter border-indigo-600 rounded-md w-3/12 m-auto bg-purple-100 shadow-2xl"
     >
-      <h3 class="text-2xl text-green-900 uppercase text-center">
+      <h3 class="text-2xl text-green-900 p-5 uppercase text-center">
         {{ pokemon.name }}
       </h3>
       <div class="flex justify-center">
@@ -15,7 +15,7 @@
 
       <h3 class="text-yellow-600 text-center">Types</h3>
       <div v-for="(type, i) in pokemon.types" :key="i">
-        <h5 class="text-blue-500 text-center">
+        <h5 class="text-blue-500 text-center pb-4">
           {{ type.type.name }}
         </h5>
       </div>

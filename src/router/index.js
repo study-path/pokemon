@@ -1,10 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-
+import SuccessResult from "../components/VideoGameStore/SuccessResult";
+import VueScriptSetupApp from "../VueScriptSetupStudying/VueScriptSetupApp";
 const routes = [
   {
     path: "/",
     name: "home",
+    component: "HomeView",
+  },
+  {
+    path: "/pokemonPicker",
+    name: "pokemonPicker",
     component: HomeView,
   },
   {
@@ -15,6 +21,21 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+  },
+  {
+    path: "/videoGameStore",
+    name: "videoGameStore",
+    component: () => import("../components/VideoGameStore/VideoGameStoreApp"),
+  },
+  {
+    path: "/successResult",
+    name: "successResult",
+    component: SuccessResult,
+  },
+  {
+    path: "/vueScriptSetupStudying",
+    name: "vueScriptSetupStudying",
+    component: VueScriptSetupApp,
   },
 ];
 
